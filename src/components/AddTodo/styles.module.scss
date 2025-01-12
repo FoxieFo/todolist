@@ -1,0 +1,23 @@
+.addtodo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+    &Input{
+      border: solid 1px var(--blue);
+      padding: 15px;
+      border-radius: 20px;
+      width: 100%;
+    }
+    &Button{
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: var(--blue);
+      transition: background-color 0.2s ease;
+      width: 20%;
+      &:hover{
+      background-color: #9ddcdc81;
+      }
+    }
+  }

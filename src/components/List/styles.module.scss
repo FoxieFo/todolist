@@ -8,6 +8,7 @@
     border-radius: 40px;
     background-color: rgb(255, 255, 255);
     padding: 30px 20px;
+    position: relative;
     &Heading{
       text-align: center;
       padding: 30px;
@@ -16,5 +17,28 @@
     }
     &Lines{
       margin: 0 20px;
+    }
+    &Img{
+      &Fox{
+        width: 120px;
+        position: absolute;
+        bottom: -40px;
+        right: -50px;
+        z-index: 1;
+      }
+      &Tree{
+        width: 180px;
+        position: absolute;
+        bottom: -30px;
+        right: -80px;
+        z-index: 0;
+      }
+      &Leaves{
+        width: 200px;
+        position: absolute;
+        top: -60px;
+        left: -50px;
+        z-index: 0;
+      }
     }
   }

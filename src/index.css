@@ -2,7 +2,7 @@
   font-family: 'Coming Soon', Arial, Helvetica, sans-serif;
   --blue: #9ddcdc;
   --beige: #fff4e1;
-  --yellow: #ffebb776;;
+  --yellow: #ffebb7;;
   --reddish: #e67a7a;
 }
 
@@ -28,7 +28,7 @@ html,body{
 	width: 100%;
 	font-size: 100%;
 	line-height: 1;
-	font-size: 14px;
+	font-size: 16px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
