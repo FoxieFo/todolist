@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 70%;
   width: 500px;
   border: solid 5px var(--reddish);
   box-shadow: 0 0 0 8px var(--blue);
@@ -85,9 +85,21 @@
 }
 
 @media (max-width: 496px) {
-  .listImgTree {
-    width: 100px;
-    height: 100px;
-    right: -50px;
+  .list {
+    &Lines{
+      margin: 0;
+    }
+    &Img {
+      &Fox{
+        width: 110px;
+        height: 110px;
+        bottom: -70px;
+      }
+      &Tree {
+        width: 100px;
+        height: 100px;
+        right: -50px;
+      }
+    }
   }
 }

@@ -12,12 +12,25 @@
     }
     &Button{
       padding: 10px 20px;
+      color: black;
       border-radius: 20px;
       background-color: var(--blue);
       transition: background-color 0.2s ease;
-      width: 20%;
+      width: 60px;
       &:hover{
       background-color: #9ddcdc81;
+      }
+    }
+  }
+
+  @media (max-width: 496px) {
+    .addtodo{
+      flex-direction: row;
+      &Input{
+        padding: 10px;
+      }
+      &Button{
+        height: 100%;
       }
     }
   }
