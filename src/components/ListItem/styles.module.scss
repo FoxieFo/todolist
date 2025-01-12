@@ -4,43 +4,46 @@
     justify-content: space-between;
     padding: 20px 10px;
     border-bottom: solid 1px black;
-    transition: color 0.1s ease;
-
-    &:hover {
-        color: var(--reddish);
-        cursor: pointer;
-    }
 
     &Title {
         display: flex;
         align-items: center;
-        &Checkbox {
-          margin-right: 10px;
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border: 1px solid var(--reddish);
-          border-radius: 4px;
-          background-color: white;
-          cursor: pointer;
-          position: relative;
-          &:checked {
-            background-color: var(--reddish);
-            border-color: var(--reddish);
-            &::after {
-              content: '';
-              position: absolute;
-              top: 4px;
-              left: 7px;
-              width: 5px;
-              height: 10px;
-              border: solid white;
-              border-width: 0 2px 2px 0;
-              transform: rotate(45deg);
-            }
-          }
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: gray;
+            cursor: pointer;
         }
-      }
+
+        &Checkbox {
+            margin-right: 10px;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--reddish);
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            position: relative;
+
+            &:checked {
+                background-color: var(--reddish);
+                border-color: var(--reddish);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    left: 7px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
 
     &Delete {
         width: 20px;
@@ -48,5 +51,8 @@
         background-color: transparent;
     }
 
-    &Completed {}
+    &Completed {
+        text-decoration: line-through;
+        color: var(--reddish);
+    }
 }

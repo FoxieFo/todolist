@@ -1,4 +1,5 @@
 import s from './styles.module.scss';
+import { useSelector } from 'react-redux';
 import ListItem from '../ListItem/ListItem';
 import AddTodo from '../AddTodo/AddTodo';
 
@@ -7,20 +8,15 @@ import tree from './../../assets/images/tree.svg'
 import leaves from './../../assets/images/leaves.svg'
 
 export default function List() {
-  const todos = [
-    { id: 1, title: 'prepare for the interview', completed: true },
-    { id: 2, title: 'water plants', completed: true },
-    { id: 3, title: 'buy groceries', completed: false },
-    { id: 4, title: 'read a book', completed: true },
-  ];
-
+  const todos = useSelector((state) => state.todos);
+  
   return (
     <div className={s.list}>
       <h1 className={s.listHeading}>to do list</h1>
       <AddTodo />
       <ul className={s.listLines}>
         {todos.map((item) => (
-          <ListItem key={item.id} title={item.title} />
+          <ListItem key={item.id} id={item.id} title={item.title} completed={item.completed} />
         ))}
       </ul>
       <img className={s.listImgFox} src={fox} alt="fox" />

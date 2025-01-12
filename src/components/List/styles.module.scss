@@ -1,44 +1,93 @@
-.list{
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    width: 500px;
-    border: solid 5px var(--reddish);
-    box-shadow: 0 0 0 8px var(--blue);
-    border-radius: 40px;
-    background-color: rgb(255, 255, 255);
-    padding: 30px 20px;
-    position: relative;
-    &Heading{
-      text-align: center;
-      padding: 30px;
-      font-size: 3rem;
-      text-transform: uppercase;
+.list {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 500px;
+  border: solid 5px var(--reddish);
+  box-shadow: 0 0 0 8px var(--blue);
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 20px;
+  position: relative;
+
+  &Heading {
+    text-align: center;
+    padding: 30px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  &Lines {
+    margin: 0 20px;
+    flex-grow: 1;
+    max-height: 30vh;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
     }
-    &Lines{
-      margin: 0 20px;
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
     }
-    &Img{
-      &Fox{
-        width: 120px;
-        position: absolute;
-        bottom: -40px;
-        right: -50px;
-        z-index: 1;
-      }
-      &Tree{
-        width: 180px;
-        position: absolute;
-        bottom: -30px;
-        right: -80px;
-        z-index: 0;
-      }
-      &Leaves{
-        width: 200px;
-        position: absolute;
-        top: -60px;
-        left: -50px;
-        z-index: 0;
-      }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: transparent;
     }
   }
+
+  &Img {
+    &Fox {
+      width: 120px;
+      position: absolute;
+      bottom: -40px;
+      right: -50px;
+      z-index: 1;
+    }
+
+    &Tree {
+      width: 180px;
+      position: absolute;
+      bottom: -30px;
+      right: -80px;
+      z-index: 0;
+    }
+
+    &Leaves {
+      width: 200px;
+      position: absolute;
+      top: -60px;
+      left: -50px;
+      z-index: 0;
+    }
+  }
+}
+
+
+@media (max-width: 649px) {
+  .list {
+    width: 75%;
+  }
+}
+
+@media (max-width: 496px) {
+  .listImgTree {
+    width: 100px;
+    height: 100px;
+    right: -50px;
+  }
+}
