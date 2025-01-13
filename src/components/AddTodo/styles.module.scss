@@ -1,6 +1,6 @@
 .addtodo{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   align-items: flex-end;
   margin-bottom: 20px;
@@ -12,6 +12,7 @@
     }
     &Button{
       padding: 10px 20px;
+      height: 100%;
       color: black;
       border-radius: 20px;
       background-color: var(--blue);
@@ -25,7 +26,6 @@
 
   @media (max-width: 496px) {
     .addtodo{
-      flex-direction: row;
       &Input{
         padding: 10px;
       }
