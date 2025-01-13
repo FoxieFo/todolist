@@ -1,5 +1,5 @@
-# Todo List with Redux 📝⚛️  
-A small project created on the go to practice Redux.
+# Todo List with Redux Toolkit 📝⚛️  
+A small project created on the go to practice Redux Toolkit.
 
 ### Features:
 - Add tasks ✍️  
