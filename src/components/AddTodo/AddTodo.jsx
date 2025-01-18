@@ -28,10 +28,10 @@ export default function AddTodo() {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         onKeyDown={handleKeyPress}
-        placeholder="let's plan the day"
+        placeholder="напишите новый план"
       />
       <button className={s.addtodoButton} onClick={handleAdd}>
-        add
+        добавить
       </button>
     </div>
   );

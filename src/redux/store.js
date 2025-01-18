@@ -2,12 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const todosSlice = createSlice({
   name: "todos",
-  initialState: [
-    { id: 1, title: "prepare for the interview", completed: true },
-    { id: 2, title: "water plants", completed: true },
-    { id: 3, title: "buy groceries", completed: false },
-    { id: 4, title: "read a book", completed: true },
-  ],
+  initialState: [],
   reducers: {
     addTodo: (state, action) => {
       state.push({
@@ -31,10 +26,41 @@ const todosSlice = createSlice({
 export const { addTodo, toggleTodo, deleteTodo } = todosSlice.actions;
 export const todosReducer = todosSlice.reducer;
 
+const loadState = () => {
+  try {
+    const serializedState = localStorage.getItem("todosState");
+    if (serializedState === null) {
+      return undefined;
+    }
+    return JSON.parse(serializedState);
+  } catch (err) {
+    console.error("Could not load state", err);
+    return undefined;
+  }
+};
+
+const saveState = (state) => {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem("todosState", serializedState);
+  } catch (err) {
+    console.error("Could not save state", err);
+  }
+};
+
+const preloadedState = loadState();
+
 const store = configureStore({
   reducer: {
     todos: todosReducer,
   },
+  preloadedState,
+});
+
+store.subscribe(() => {
+  saveState({
+    todos: store.getState().todos,
+  });
 });
 
 export default store;

@@ -12,7 +12,7 @@ export default function List() {
   
   return (
     <div className={s.list}>
-      <h1 className={s.listHeading}>to do list</h1>
+      <h1 className={s.listHeading}>список дел</h1>
       <AddTodo />
       <ul className={s.listLines}>
         {todos.map((item) => (

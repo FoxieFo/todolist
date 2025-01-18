@@ -1,36 +1,41 @@
-.addtodo{
+.addtodo {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: flex-end;
   margin-bottom: 20px;
-    &Input{
-      border: solid 1px var(--blue);
-      padding: 15px;
-      border-radius: 20px;
-      width: 100%;
-    }
-    &Button{
-      padding: 10px 20px;
-      height: 100%;
-      color: black;
-      border-radius: 20px;
-      background-color: var(--blue);
-      transition: background-color 0.2s ease;
-      width: 60px;
-      &:hover{
-      background-color: #9ddcdc81;
-      }
-    }
+
+  &Input {
+    border: solid 1px var(--blue);
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 16px;
   }
 
-  @media (max-width: 496px) {
-    .addtodo{
-      &Input{
-        padding: 10px;
-      }
-      &Button{
-        height: 100%;
-      }
+  &Button {
+    padding: 10px 20px;
+    height: 100%;
+    color: black;
+    border-radius: 20px;
+    background-color: var(--blue);
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #9ddcdc81;
     }
   }
+}
+
+@media (max-width: 496px) {
+  .addtodo {
+    &Input {
+      padding: 10px;
+    }
+
+    &Button {
+      height: 100%;
+    }
+  }
+}
